@@ -1,0 +1,94 @@
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: goldenrod;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  gap: 20px; /* reduced gap for more space */
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Regular Nav Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: goldenrod;
+  transform: translateY(-2px);
+}
+
+/* Logout Button Styled Like a Link */
+.logout-btn {
+  color: #ff4c4c;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  max-width: 150px;       /* Limit width for long names */
+  overflow: hidden;        /* Hide overflow */
+  text-overflow: ellipsis; /* Show "..." for long names */
+  white-space: nowrap;     /* Prevent wrapping */
+}
+
+.logout-btn:hover {
+  color: #ff1a1a;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px 20px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .logout-btn {
+    max-width: 200px; /* Slightly more room for mobile */
+  }
+}

@@ -1,0 +1,14 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000; /* fallback */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

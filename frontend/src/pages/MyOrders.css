@@ -1,0 +1,109 @@
+/* === Main Container === */
+.orders-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+
+  /* ✅ Background image handled inline in JSX */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* === Overlay for readability === */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* === Content === */
+.orders-content {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.orders-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* === Orders Table === */
+.orders-content table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.orders-content th,
+.orders-content td {
+  padding: 12px 15px;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orders-content th {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.orders-content tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* === Responsive Table === */
+@media (max-width: 768px) {
+  .orders-content table,
+  .orders-content thead,
+  .orders-content tbody,
+  .orders-content th,
+  .orders-content td,
+  .orders-content tr {
+    display: block;
+    width: 100%;
+  }
+
+  .orders-content tr {
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .orders-content td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  .orders-content td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.Heading{
+  color: goldenrod;
+}
